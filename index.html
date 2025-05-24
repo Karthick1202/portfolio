@@ -521,6 +521,493 @@ footer .text span a:hover{
   }
 }
 
+
+/* Experience Section Styles */
+#experience {
+  position: relative;
+  padding: 100px 0;
+  background: #0a192f;
+  overflow: hidden;
+}
+
+.gradient-top,
+.gradient-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 150px;
+  z-index: 1;
+}
+
+.gradient-top {
+  top: 0;
+  background: linear-gradient(180deg, rgba(10,25,47,1) 0%, rgba(10,25,47,0) 100%);
+}
+
+.gradient-bottom {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(10,25,47,1) 0%, rgba(10,25,47,0) 100%);
+}
+
+.radial-gradient.cyan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(88,212,216,0.15) 0%, rgba(10,25,47,0) 70%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.badge {
+  display: inline-block;
+  background: #58d4d8;
+  color: #0a192f;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.section-header h2 {
+  color: #ccd6f6;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section-divider {
+  width: 50px;
+  height: 2px;
+  background: #58d4d8;
+  margin: 0 auto;
+  transition: width 0.5s ease;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 29px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #233554;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #58d4d8;
+  border-radius: 50%;
+  border: 4px solid #0a192f;
+}
+
+.timeline-content {
+  background: #112240;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+  transition: transform 0.25s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timeline-header h3 {
+  color: #ccd6f6;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.company {
+  color: #58d4d8;
+  font-size: 1rem;
+}
+
+.timeline-period {
+  color: #8892b0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-location {
+  color: #8892b0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.timeline-sections {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.timeline-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.timeline-section h4 {
+  color: #ccd6f6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.section-line {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: #58d4d8;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-list li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #8892b0;
+}
+
+.timeline-list i {
+  color: #58d4d8;
+  margin-top: 3px;
+}
+
+/* Animations */
+.animate-fade-in-scale.active {
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+.animate-fade-in.active {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-width.active {
+  animation: widthGrow 1s ease forwards;
+}
+
+.animate-fade-in-up.active {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes widthGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-line {
+    left: 19px;
+  }
+
+  .timeline-dot {
+    left: 10px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+}
+
+/* Projects Section Styles */
+#projects {
+  position: relative;
+  padding: 100px 0;
+  background: #0a192f;
+  overflow: hidden;
+}
+
+.radial-gradient.blue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(100,149,237,0.15) 0%, rgba(10,25,47,0) 70%);
+  transform: translate(-50%, -50%);
+}
+
+.project-filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.project-filter {
+  padding: 8px 20px;
+  border: 2px solid #233554;
+  border-radius: 25px;
+  background: transparent;
+  color: #8892b0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-filter.active {
+  border-color: #58d4d8;
+  color: #58d4d8;
+  background: rgba(88,212,216,0.1);
+}
+
+.project-filter:hover {
+  border-color: #58d4d8;
+  color: #58d4d8;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #112240;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.highlight {
+  position: relative;
+}
+
+.project-card.highlight::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #58d4d8, #3a86ff);
+  z-index: -1;
+  border-radius: 10px;
+  animation: gradientBorder 3s ease infinite;
+}
+
+.project-card-header {
+  height: 150px;
+  background: #233554;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-header.gradient {
+  background: linear-gradient(135deg, #58d4d8 0%, #3a86ff 100%);
+}
+
+.project-card-content {
+  padding: 25px;
+}
+
+.project-icon-container {
+  width: 60px;
+  height: 60px;
+  background: rgba(88,212,216,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project-icon-container i {
+  font-size: 1.5rem;
+  color: #58d4d8;
+}
+
+.project-info h3 {
+  color: #ccd6f6;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.project-tag {
+  background: rgba(88,212,216,0.1);
+  color: #58d4d8;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.project-description {
+  color: #8892b0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 80px;
+}
+
+.project-footer {
+  border-top: 1px solid #233554;
+  padding-top: 15px;
+}
+
+.project-link {
+  color: #58d4d8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.project-link i {
+  font-size: 0.8rem;
+}
+
+.project-link:hover {
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes gradientBorder {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.8; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-header {
+    height: 120px;
+  }
+
+  .project-description {
+    min-height: auto;
+  }
+
+  .project-filters {
+    gap: 10px;
+  }
+
+  .project-filter {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card-content {
+    padding: 20px;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+}
     </style>
   </head>
   <body>
@@ -535,7 +1022,9 @@ footer .text span a:hover{
         <ul class="menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#experience" class="mobile-nav-link" data-section="experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects" class="mobile-nav-link" data-section="projects">Projects</a></li>
           <!-- <li><a href="#services">Services</a></li> -->
           <li><a href="#contact">Contact</a></li>
           <div class="cancel-btn">
@@ -601,7 +1090,7 @@ footer .text span a:hover{
               My Skills are Python, SQL, HTML, CSS, JavaScript, and Django are all important tools in the world of web development. Python is a versatile programming language that is widely used for web development, data analysis, and automation. SQL is essential for managing and querying databases, while HTML, CSS, and JavaScript are the building blocks of web design and interactivity.And with Django, we can create powerful and scalable web applications.
             </p>
             <div class="experience">
-              <div class="num">0.5</div>
+              <div class="num">1</div>
               <div class="exp">
                 Years Of <br />
                 Experience
@@ -638,6 +1127,331 @@ footer .text span a:hover{
       </div>
     </section>
 
+    <section id="experience" class="section">
+      <div class="gradient-top"></div>
+      <div class="gradient-bottom"></div>
+      <div class="radial-gradient cyan"></div>
+      
+      <div class="container">
+        <div class="section-header">
+          <div class="badge animate-fade-in-scale active">Career Path</div>
+          <h2 class="animate-fade-in active">Work Experience</h2>
+          <div class="section-divider animate-width active"></div>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item animate-fade-in-up active">
+            <!-- Timeline line -->
+            <div class="timeline-line"></div>
+            
+            <!-- Timeline dot -->
+            <div class="timeline-dot"></div>
+            
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Software Programmer</h3>
+                  <p class="company">Bharathbrads Pvt Ltd</p>
+                </div>
+                <div class="timeline-period">
+                  <i class="far fa-calendar"></i>
+                  <span>May 2024 - Present</span>
+                </div>
+              </div>
+              <div class="timeline-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Chennai, India</span>
+              </div>
+              
+              <div class="timeline-sections">
+                <div class="timeline-section">
+                  <h4>
+                    <span class="section-line"></span>
+                    Key Responsibilities
+                  </h4>
+                  <ul class="timeline-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <span>Managed multiple projects, overseeing end-to-end development from requirement gathering to deployment.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <span>Led a team while handling solo projects, ensuring high-quality output.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <span>Designed scalable, dynamic project architectures, allowing user customizations.</span>
+                    </li>
+                   
+                  </ul>
+                </div>
+                 
+                <div class="timeline-section">
+                  <h4>
+                    <span class="section-line"></span>
+                    Problem Solving
+                  </h4>
+                  <ul class="timeline-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <span>Debugged and optimized the Application System, fixing logic issues.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <span>Rescued a Office Management System, resolving critical mid-development challenges.</span>
+                    </li>
+                  </ul>
+                </div>
+                
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="projects" class="section">
+      <div class="gradient-top"></div>
+      <div class="gradient-bottom"></div>
+      <div class="radial-gradient blue"></div>
+      
+      <div class="container">
+        <div class="section-header">
+          <div class="badge animate-fade-in-scale active">My Work</div>
+          <h2 class="animate-fade-in active">Key Projects</h2>
+          <div class="section-divider animate-width active"></div>
+        </div>
+        
+        <div class="project-filters animate-fade-in active">
+          <button class="project-filter active" data-filter="all">All</button>
+          <button class="project-filter" data-filter="django">Django</button>
+          <button class="project-filter" data-filter="api">API</button>
+          <button class="project-filter" data-filter="management">Management</button>
+        </div>
+        
+        <div class="projects-grid">
+          <div class="project-card animate-fade-in-up active" data-categories="django,management">
+            <div class="project-card-header"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-hospital"></i>
+              </div>
+              <div class="project-info">
+                <h3>Office Management</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">Python</span>
+                </div>
+              </div>
+              <p class="project-description">
+                The Office Management System is a comprehensive Django-based web application designed to streamline daily a administrative and operational tasks within an organization. The system features core modules such as attendance tracking, timesheets, leave management. 
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- <div class="project-card highlight animate-fade-in-up active" data-categories="django,management">
+            <div class="project-card-header gradient"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-school"></i>
+              </div>
+              <div class="project-info">
+                <h3>School Management System (SMS)</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">PostgreSQL</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Built from scratch using a Multi-tenant architecture. Features: Admission, Online Classes, Timetable, Exam, Live Chat, HR, CMS, and Role-based Portals. Impact: Reduced manual work by 60%.
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div> -->
+          
+          <div class="project-card animate-fade-in-up active" data-categories="django,management">
+            <div class="project-card-header"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="project-info">
+                <h3>Asset Management</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+              </div>
+              <p class="project-description">
+                
+                The Asset Management System was developed to efficiently manage the full lifecycle of physical and digital assets within the organization. The system provides modules for asset creation, tracking, and maintenance, integrated with a detailed asset lifecycle management process. The solution also includes a procurement module for handling asset purchases and vendor coordination. 
+
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card animate-fade-in-up active" data-categories="django,api">
+            <div class="project-card-header"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="project-info">
+                <h3>Job Portal</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">Debugging</span>
+                </div>
+              </div>
+              <p class="project-description">
+                The Job Portal is a Django-based web application that serves as a complete job recruitment platform. It features separate role-specific portals for Jobseekers, Employers, Agents, Panel Members, and Admin users. The backend is built using Django REST Framework to handle data processing and business logic, while the frontend is rendered using Django templates for a dynamic and responsive user interface. 
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- <div class="project-card animate-fade-in-up active" data-categories="django,api">
+            <div class="project-card-header"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="project-info">
+                <h3>API Gateway</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">API</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Centralized 50+ company APIs with 2-step authentication. Provided a common endpoint for all project APIs.
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div> -->
+          
+          <!-- <div class="project-card animate-fade-in-up active" data-categories="django,payment">
+            <div class="project-card-header"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <div class="project-info">
+                <h3>Payment Integrations</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Mpesa</span>
+                  <span class="project-tag">Razorpay</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Mpesa (Kenya): Integrated for a restaurant in Nairobi. Razorpay: Implemented for company products.
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div> -->
+          
+          <!-- <div class="project-card animate-fade-in-up active" data-categories="django,management">
+            <div class="project-card-header"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="project-info">
+                <h3>Restaurant Management System</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">Problem Solving</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Joined mid-development, identified and resolved major issues to complete the project.
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div> -->
+          
+          <div class="project-card highlight animate-fade-in-up active" data-categories="django,api">
+            <div class="project-card-header gradient"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="project-info">
+                <h3>App Builder Tool</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">Automation</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Automated Django project generation from Excel (CRUD &amp; API templates). Saved 40+ hours per project.
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- <div class="project-card animate-fade-in-up active" data-categories="django,management">
+            <div class="project-card-header"></div>
+            <div class="project-card-content">
+              <div class="project-icon-container">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="project-info">
+                <h3>Enterprise Solutions</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">Enterprise</span>
+                </div>
+              </div>
+              <p class="project-description">
+                ERP, CRM, HRMS, Legal ERP, Office Management, Supply Chain. Involved in requirement gathering, creating specifications, and leading development teams.
+              </p>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  View Details <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
     <!-- My Services Section Start -->
     <!-- <section class="services" id="services">
       <div class="content">
@@ -758,6 +1572,43 @@ for (var i = 0; i < navLinks.length; i++) {
   });
 }
 
+
+// Animation trigger on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+});
+
+document.querySelectorAll('.animate-fade-in, .animate-fade-in-up, .animate-width, .animate-fade-in-scale').forEach((el) => {
+  observer.observe(el);
+});
+
+// Project Filtering
+document.querySelectorAll('.project-filter').forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    
+    // Remove active class from all buttons
+    document.querySelectorAll('.project-filter').forEach(btn => 
+      btn.classList.remove('active'));
+    
+    // Add active class to clicked button
+    button.classList.add('active');
+    
+    // Filter projects
+    document.querySelectorAll('.project-card').forEach(card => {
+      const categories = card.dataset.categories.split(',');
+      if (filter === 'all' || categories.includes(filter)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
     </script>
   </body>
 </html>
